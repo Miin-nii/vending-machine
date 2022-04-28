@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+
+body {
+    background-color: #eae8fe;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0 28px;
+    flex-wrap: wrap;
+    padding-top: 248px;
+}
+#wrapper .machine,
+#wrapper .info {
+    width: 360px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#wrapper .title-logo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 386px;
+    text-align: center;
+}
+
+#wrapper .machine {
+    padding: 31px 27px 28px;
+}
+.machine .list-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    text-align: center;
+}
+.machine .list-item li {
+    width: 94px;
+    padding: 11px 0 9px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.machine .list-item li:active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 3px solid #6327fe;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.machine .list-item li.sold-out::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/품절.png) rgba(0, 0, 0, 0.8) no-repeat center;
+    background-size: 60px 46px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.machine .list-item li.sold-out::after {
+    content: "품절";
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+}
+.machine .list-item li.sold-out {
+    pointer-events: none;
+}
+.machine .list-item li .tit-item {
+    display: block;
+    margin: 6px 0 7px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    color: #333333;
+}
+.machine .list-item li .btn-price {
+    background: #6327fe;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #fff;
+    width: 70px;
+}
+
+.machine .cont-buy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.cont-buy .balance,
+.cont-buy .input-pay,
+.cont-buy .list-item-added {
+    grid-column: 1/3;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.cont-buy .btn-return,
+.cont-buy .btn-pay,
+.cont-buy .btn-get {
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.cont-buy .balance {
+    padding: 6px 10px;
+    background: #eae8fe;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cont-buy .txt-balance {
+    float: right;
+}
+
+.cont-buy .input-pay {
+    padding: 6px;
+    border: 1px solid #bdbdbd;
+    color: #bdbdbd;
+}
+
+.cont-buy .list-item-added {
+    height: 106px;
+    overflow-y: scroll;
+    border: 1px solid #bdbdbd;
+    background: #eae8fe;
+    padding: 12px;
+}
+.list-item-added li {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.list-item-added li .img-item {
+    width: 18px;
+    float: left;
+}
+.list-item-added li .txt-item {
+    margin-left: 10px;
+    line-height: 33px;
+    font-size: 9px;
+    float: left;
+}
+.list-item-added li .num-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: right;
+}
+.list-item-added li + li {
+    margin-top: 6px;
+}
+
+.cont-buy .btn-get {
+    font-weight: 700;
+    color: #fff;
+    background: #6327fe;
+}
+
+#wrapper .info {
+    background-color: #eae8fe;
+}
+
+.info .cont-mymoney {
+    padding: 9px 27px;
+    background-color: #fff;
+}
+.cont-mymoney .info-mymoney {
+    background-color: #eae8fe;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cont-mymoney .info-mymoney .txt-mymoney {
+    font-weight: 700;
+    float: right;
+}
+
+.info .cont-myitems {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 25px 27px 32px;
+}
+.cont-myitems .tit-myitems {
+    display: block;
+    text-align: center;
+    margin-bottom: 13px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cont-myitems .list-item-added {
+    height: 364px;
+    overflow-y: scroll;
+    padding: 12px;
+    background: #eae8fe;
+    border: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.cont-myitems .txt-total {
+    display: block;
+    text-align: right;
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 6px;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: #fff;
+    }
+    #wrapper {
+        padding-top: 65px;
+    }
+    #wrapper .img-logo {
+        width: 166px;
+        height: 78px;
+    }
+
+    .info .cont-myitems {
+        margin-top: 0;
+        padding: 31px 27px 32px;
+    }
+}

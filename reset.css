@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body,
+html {
+    font-size: 12px;
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+a {
+    text-decoration: none;
+}
+address {
+    font-style: normal;
+}
+img {
+    vertical-align: bottom;
+}
+table {
+    border-collapse: collapse;
+}
+button {
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.ir {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+}
